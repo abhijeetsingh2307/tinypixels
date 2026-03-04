@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TinyPixels</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/>
+</head>
+<body>
+
+  <h1><h1>TinyPixels</h1></h1>
+<p id="instructions">
+Click and drag to draw. Toggle eraser to remove pixels.
+</p>
+<div class="controls">
+
+  <div class="group">
+    <div class="group-title">Tools</div>
+    <div class="group-content">
+      <label for="colorPicker">Pick a colour to fill</label>
+<button id="colorPicker"></button>
+      <button id="eraserBtn">Eraser</button>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="group-title">History</div>
+    <div class="group-content">
+      <button id="undoBtn">Undo</button>
+      <button id="redoBtn">Redo</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="group-title">Canvas</div>
+    <div class="group-content">
+      <label for="gridSize">Size</label>
+      <select id="gridSize">
+        <option value="8">8 x 8</option>
+        <option value="16">16 x 16</option>
+        <option value="32" selected>32 x 32</option>
+      </select>
+      <label for="zoomRange">Zoom</label>
+<input type="range" id="zoomRange" min="10" max="50" value="25">
+      <button id="downloadBtn">Download as Image</button>
+    </div>
+  </div>
+
+</div>
+
+</div>
+  <div id="grid"></div>
+<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
